@@ -1,8 +1,7 @@
 ---
-layout: archive
-title: "Research"
+layout: page
+title: Research
 permalink: /research/
-author_profile: true
 ---
 
 My research lies in algebraic graph theory, especially the study of symmetry in graphs via group actions.
