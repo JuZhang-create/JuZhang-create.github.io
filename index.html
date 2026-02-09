@@ -10,10 +10,11 @@
 
     <style>
         :root {
-            --primary: #1a5276; /* 深蓝色，适合学术感 */
+            --primary: #1a5276; 
             --text: #2c3e50;
             --link: #2980b9;
             --bg: #ffffff;
+            --highlight: #e67e22;
         }
 
         body {
@@ -36,13 +37,18 @@
         .profile-links { margin: 20px 0; }
         .profile-links a {
             display: inline-block;
-            margin-right: 15px;
+            margin-right: 12px;
+            margin-bottom: 10px;
             padding: 5px 15px;
             border: 1px solid var(--link);
             border-radius: 20px;
             font-size: 0.9em;
         }
         .profile-links a:hover { background-color: var(--link); color: white; }
+
+        /* CV 链接的高亮样式 */
+        .cv-link { font-weight: bold; color: var(--highlight); }
+        .cv-link::before { content: "📄 "; }
 
         .intro { font-size: 1.1em; }
         .contact { font-family: monospace; background: #f4f4f4; padding: 10px 15px; border-radius: 5px; display: inline-block; margin-top: 10px; }
@@ -55,7 +61,7 @@
         .pub-author { font-weight: 600; }
         .pub-title { font-style: italic; }
         .pub-journal { font-weight: bold; }
-        .pub-link { font-size: 0.85em; color: #e67e22; margin-left: 10px; }
+        .pub-link { font-size: 0.85em; color: var(--highlight); margin-left: 10px; }
 
         @media (max-width: 600px) {
             ul.interests { columns: 1; }
@@ -70,6 +76,9 @@
 </header>
 
 <section class="intro">
+  <p>
+       Ju (桔)  Zhang (张)
+    </p>
     <p>
         Currently, I am a PhD student specializing in <strong>Algebraic Graph Theory</strong> at 
         <a href="https://www.bjtu.edu.cn" target="_blank">Beijing Jiaotong University (BJTU)</a>.
@@ -79,7 +88,7 @@
     </p>
 
     <div class="profile-links">
-        <a href="https://mathscinet.ams.org/mathscinet/author?authorId=1509788" target="_blank">AMS Profile</a>
+           <a href="https://mathscinet.ams.org/mathscinet/author?authorId=1509788" target="_blank">AMS Profile</a>
         <a href="https://scholar.google.com/citations?user=RApEPuwAAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a>
         <a href="https://orcid.org/0009-0006-4875-8840" target="_blank">ORCID</a>
     </div>
@@ -88,12 +97,17 @@
 </section>
 
 <section>
+    <h2>Curriculum Vitae</h2>
+    <p>You can find my latest CV here: <a href="CV_JuZhang.pdf" target="_blank" class="cv-link">Download CV (PDF)</a></p>
+</section>
+
+<section>
     <h2>Research Interests</h2>
     <ul class="interests">
         <li>Algebraic Graph Theory</li>
         <li>Finite Groups & Permutation Groups</li>
-        <li>Symmetry of Graphs (vertex/edge/arc-transitive)</li>
-        <li>Token Graphs & Combinatorics Objects</li>
+        <li>Symmetry of Graphs (Vertex/Edge-transitive)</li>
+        <li>Token Graphs & Combinatorics</li>
     </ul>
 </section>
 
@@ -117,12 +131,12 @@
             <span class="pub-title">The automorphisms of 2-token graphs</span>, 
             <span class="pub-journal">Applied Mathematics and Computation</span> 446 (2023) 127872.
             <a href="https://www.sciencedirect.com/science/article/abs/pii/S0096300323000413?via%3Dihub" class="pub-link">[Paper]</a>
-        </li>
-        <li class="pub-item">
-            Na Li, <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, 
-            <span class="pub-title">Cubic normal bi-Cayley graphs and bi-normal Cayley graphs</span>, 
-            <span class="pub-journal">Advances in Mathematics (China)</span> 52(2023) no.5.
-        </li>
+     <li class="pub-item">
+    Na Li, <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, 
+    <span class="pub-title">Cubic normal bi-Cayley graphs and bi-normal Cayley graphs</span>, 
+    <span class="pub-journal">Advances in Mathematics (China)</span> 52(2023) no.5.
+    <a href="CNB-SXJZ.pdf" target="_blank" class="pub-link">[PDF]</a>
+</li>
         <li class="pub-item">
             <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, 
             <span class="pub-title">Edge-transitive token graphs</span>, 
