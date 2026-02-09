@@ -3,123 +3,134 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhang Ju - Academic Profile</title>
+    <title>Ju Zhang's Home Page</title>
     
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --bg-color: #f9f9f9;
-            --text-color: #333;
+            --primary: #1a5276; /* 深蓝色，适合学术感 */
+            --text: #2c3e50;
+            --link: #2980b9;
+            --bg: #ffffff;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            max-width: 900px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            max-width: 850px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 50px 25px;
+            background-color: #fdfdfd;
         }
 
-        header {
-            border-bottom: 2px solid var(--primary-color);
-            margin-bottom: 30px;
-            padding-bottom: 20px;
+        header { margin-bottom: 40px; border-bottom: 2px solid #eee; padding-bottom: 20px; }
+        h1 { font-size: 2.2em; color: var(--primary); margin-bottom: 10px; }
+        h2 { font-size: 1.5em; border-left: 4px solid var(--primary); padding-left: 12px; margin-top: 35px; color: var(--primary); }
+        
+        a { color: var(--link); text-decoration: none; transition: 0.3s; }
+        a:hover { text-decoration: underline; color: #154360; }
+
+        .profile-links { margin: 20px 0; }
+        .profile-links a {
+            display: inline-block;
+            margin-right: 15px;
+            padding: 5px 15px;
+            border: 1px solid var(--link);
+            border-radius: 20px;
+            font-size: 0.9em;
         }
+        .profile-links a:hover { background-color: var(--link); color: white; }
 
-        h1 { color: var(--primary-color); margin-bottom: 5px; }
-        h2 { 
-            color: var(--primary-color); 
-            border-left: 5px solid var(--accent-color);
-            padding-left: 15px;
-            margin-top: 40px;
+        .intro { font-size: 1.1em; }
+        .contact { font-family: monospace; background: #f4f4f4; padding: 10px 15px; border-radius: 5px; display: inline-block; margin-top: 10px; }
+
+        ul.interests { columns: 2; -webkit-columns: 2; -moz-columns: 2; list-style-type: square; }
+
+        .pub-list { list-style: none; padding-left: 0; }
+        .pub-item { margin-bottom: 18px; position: relative; padding-left: 20px; }
+        .pub-item::before { content: "•"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+        .pub-author { font-weight: 600; }
+        .pub-title { font-style: italic; }
+        .pub-journal { font-weight: bold; }
+        .pub-link { font-size: 0.85em; color: #e67e22; margin-left: 10px; }
+
+        @media (max-width: 600px) {
+            ul.interests { columns: 1; }
         }
-
-        .subtitle { font-size: 1.2em; color: #666; font-style: italic; }
-
-        .section { background: white; padding: 25px; border-radius: 8px; shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-
-        .pub-item {
-            margin-bottom: 15px;
-            padding-left: 10px;
-            border-left: 2px solid #eee;
-        }
-        .pub-author { font-weight: bold; }
-
-        .contact-info {
-            background: #2c3e50;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 50px;
-        }
-        .contact-info a { color: #3498db; text-decoration: none; }
-
-        code { background: #eee; padding: 2px 5px; border-radius: 3px; }
     </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Ju (桔) Zhang (张)</h1>
-    <p class="subtitle">PhD student in Algebraic Graph Theory</p>
+    <h1>Welcome to Ju Zhang's Home Page</h1>
 </header>
 
-<div class="section">
+<section class="intro">
+    <p>
+        Currently, I am a PhD student specializing in <strong>Algebraic Graph Theory</strong> at 
+        <a href="https://www.bjtu.edu.cn" target="_blank">Beijing Jiaotong University (BJTU)</a>.
+    </p>
+    <p>
+        I am fortunate to be advised by <a href="http://faculty.bjtu.edu.cn/8208/" target="_blank">Professor Jin-Xin Zhou</a>.
+    </p>
+
+    <div class="profile-links">
+        <a href="https://mathscinet.ams.org/mathscinet/author?authorId=1509788" target="_blank">AMS Profile</a>
+        <a href="https://scholar.google.com/citations?user=RApEPuwAAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a>
+        <a href="https://orcid.org/0009-0006-4875-8840" target="_blank">ORCID</a>
+    </div>
+
+    <p><strong>Email Address:</strong> <span class="contact">juzhang(at)bjtu.edu.cn</span></p>
+</section>
+
+<section>
     <h2>Research Interests</h2>
-    <ul>
-        <li><strong>Algebraic Graph Theory</strong></li>
-        <li><strong>Finite Groups</strong> & Permutation Groups</li>
-        <li><strong>Symmetry of Graphs</strong> (Vertex/Edge-transitive)</li>
-        <li><strong>Token Graphs</strong> & Combinatorics</li>
+    <ul class="interests">
+        <li>Algebraic Graph Theory</li>
+        <li>Finite Groups & Permutation Groups</li>
+        <li>Symmetry of Graphs (vertex/edge/arc-transitive)</li>
+        <li>Token Graphs & Combinatorics Objects</li>
     </ul>
-</div>
+</section>
 
-<div class="section">
-    <h2>Research Overview</h2>
-    <p>My research lies in algebraic graph theory, especially the study of symmetry in graphs via group actions.</p>
-
-    <h3>Token Graphs</h3>
-    <p>For a graph \(G\), the \(k\)-token graph \(F_k(G)\) is a graph whose vertices correspond to \(k\)-subsets of \(V(G)\). Token graphs encode combinatorial and structural information of the original graph in a higher-dimensional configuration space.</p>
-    <p>I study automorphism groups of token graphs and investigate when \(\mathrm{Aut}(F_k(G))\) is determined by \(\mathrm{Aut}(G)\). Particular attention is given to Hamming graphs and highly symmetric graphs.</p>
-
-    <h3>Strongly Regular Graphs</h3>
-    <p>I am interested in structural properties of strongly regular graphs, especially the case \(\mu=2\). My work focuses on clique geometry, complements of strongly regular graphs, and local structures determined by common neighbours.</p>
-</div>
-
-<div class="section">
+<section>
     <h2>Selected Publications</h2>
-    <div class="pub-item">
-        <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, <em>Edge-transitive token graphs</em>, <strong>Discrete Mathematics</strong> 345 (2022) 113043.
-    </div>
-    <div class="pub-item">
-        Na Li, <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, <em>Cubic normal bi-Cayley graphs and bi-normal Cayley graphs</em>, <strong>Advances in Mathematics (China)</strong> 52(2023) no.5.
-    </div>
-    <div class="pub-item">
-        <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, Yan-Tao Li, Young Soo Kwon, <em>The automorphisms of 2-token graphs</em>, <strong>Applied Mathematics and Computation</strong> 446 (2023) 127872.
-    </div>
-    <div class="pub-item">
-        <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, Jaeun Lee, Yan-Tao Li, Jin-Hua Xie, <em>Automorphism group of 2-token graph of the Hamming graph</em>, <strong>Discrete Mathematics</strong> 347 (2024) 113689.
-    </div>
-    <div class="pub-item">
-        <span class="pub-author">Ju Zhang</span>, Young Soo Kwon, Jin-Xin Zhou, <em>Automorphism groups of 2-token graph of Cartesian product of two cycles</em>, <strong>Graphs and Combinatorics</strong>, 41 (2025) 77.
-    </div>
-</div>
-
-<div class="contact-info">
-    <h3>Contact Information</h3>
-    <p>📧 Email: <a href="mailto:juzhang@bjtu.edu.cn">juzhang@bjtu.edu.cn</a></p>
-    <p>📍 Institution: Beijing Jiaotong University</p>
-</div>
+    <ul class="pub-list">
+        <li class="pub-item">
+            <span class="pub-author">Ju Zhang</span>, Young Soo Kwon, Jin-Xin Zhou, 
+            <span class="pub-title">Automorphism groups of 2-token graph of Cartesian product of two cycles</span>, 
+            <span class="pub-journal">Graphs and Combinatorics</span>, 41 (2025) 77.
+            <a href="https://link.springer.com/article/10.1007/s00373-025-02940-7" class="pub-link">[DOI]</a>
+        </li>
+        <li class="pub-item">
+            <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, Jaeun Lee, Yan-Tao Li, Jin-Hua Xie, 
+            <span class="pub-title">Automorphism group of 2-token graph of the Hamming graph</span>, 
+            <span class="pub-journal">Discrete Mathematics</span> 347 (2024) 113689.
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0012365X23003758?via%3Dihub" class="pub-link">[Journal Link]</a>
+        </li>
+        <li class="pub-item">
+            <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, Yan-Tao Li, Young Soo Kwon, 
+            <span class="pub-title">The automorphisms of 2-token graphs</span>, 
+            <span class="pub-journal">Applied Mathematics and Computation</span> 446 (2023) 127872.
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0096300323000413?via%3Dihub" class="pub-link">[Paper]</a>
+        </li>
+        <li class="pub-item">
+            Na Li, <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, 
+            <span class="pub-title">Cubic normal bi-Cayley graphs and bi-normal Cayley graphs</span>, 
+            <span class="pub-journal">Advances in Mathematics (China)</span> 52(2023) no.5.
+        </li>
+        <li class="pub-item">
+            <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, 
+            <span class="pub-title">Edge-transitive token graphs</span>, 
+            <span class="pub-journal">Discrete Mathematics</span> 345 (2022) 113043.
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0012365X22002497?via%3Dihub" class="pub-link">[DOI]</a>
+        </li>
+    </ul>
+</section>
 
 </body>
 </html>
