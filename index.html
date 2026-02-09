@@ -33,7 +33,16 @@
         
         a { color: var(--link); text-decoration: none; transition: 0.3s; }
         a:hover { text-decoration: underline; color: #154360; }
-
+        
+       .name-title {
+       font-size: 2.2em;
+       font-weight: 800;
+       color: #1a5276;
+       border-bottom: 3px solid #3498db; /* 增加一条亮蓝色的装饰线 */
+       display: inline-block;             /* 让边框只跟文字一样宽 */
+       padding-bottom: 5px;
+       margin-bottom: 20px;
+}
         .profile-links { margin: 20px 0; }
         .profile-links a {
             display: inline-block;
@@ -70,21 +79,19 @@
 </head>
 
 <body>
-
 <header>
     <h1>Welcome to Ju Zhang's Home Page</h1>
 </header>
 
 <section class="intro">
-  <p>
-       Ju (桔)  Zhang (张)
-    </p>
+    <p class="name-title">Ju (桔) Zhang (张)</p>
+</section>
     <p>
         Currently, I am a PhD student specializing in <strong>Algebraic Graph Theory</strong> at 
         <a href="https://www.bjtu.edu.cn" target="_blank">Beijing Jiaotong University (BJTU)</a>.
     </p>
     <p>
-        I am fortunate to be advised by <a href="http://faculty.bjtu.edu.cn/8208/" target="_blank">Professor Jin-Xin Zhou</a>.
+        I am fortunate to be advised by <a href="http://faculty.bjtu.edu.cn/8208/" target="_blank">Prof. Jin-Xin Zhou</a>.
     </p>
 
     <div class="profile-links">
