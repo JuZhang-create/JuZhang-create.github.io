@@ -1,68 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title>Zhang Ju</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhang Ju - Academic Profile</title>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+
+        h1 { color: var(--primary-color); margin-bottom: 5px; }
+        h2 { 
+            color: var(--primary-color); 
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 40px;
+        }
+
+        .subtitle { font-size: 1.2em; color: #666; font-style: italic; }
+
+        .section { background: white; padding: 25px; border-radius: 8px; shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+
+        .pub-item {
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 2px solid #eee;
+        }
+        .pub-author { font-weight: bold; }
+
+        .contact-info {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+        .contact-info a { color: #3498db; text-decoration: none; }
+
+        code { background: #eee; padding: 2px 5px; border-radius: 3px; }
+    </style>
 </head>
 
 <body>
-<h1>Ju(桔) Zhang(张)</h1>
 
-<p>PhD in Algebraic Graph Theory</p>
+<header>
+    <h1>Ju (桔) Zhang (张)</h1>
+    <p class="subtitle">PhD in Algebraic Graph Theory</p>
+</header>
 
-<h2>Research Interests</h2>
-<ul>
-<li>Algebraic Graph Theory</li>
-<li>Finite Groups</li>
-<li>Symmetry of Graphs</li>
-<li>Token Graphs</li>
-</ul>
+<div class="section">
+    <h2>Research Interests</h2>
+    <ul>
+        <li><strong>Algebraic Graph Theory</strong></li>
+        <li><strong>Finite Groups</strong> & Permutation Groups</li>
+        <li><strong>Symmetry of Graphs</strong> (Vertex/Edge-transitive)</li>
+        <li><strong>Token Graphs</strong> & Combinatorics</li>
+    </ul>
+</div>
 
-  ---
-layout: archive
-title: "Research"
-permalink: /research/
-author_profile: true
----
+<div class="section">
+    <h2>Research Overview</h2>
+    <p>My research lies in algebraic graph theory, especially the study of symmetry in graphs via group actions.</p>
 
-My research lies in algebraic graph theory, especially the study of symmetry in graphs via group actions.
+    <h3>Token Graphs</h3>
+    <p>For a graph \(G\), the \(k\)-token graph \(F_k(G)\) is a graph whose vertices correspond to \(k\)-subsets of \(V(G)\). Token graphs encode combinatorial and structural information of the original graph in a higher-dimensional configuration space.</p>
+    <p>I study automorphism groups of token graphs and investigate when \(\mathrm{Aut}(F_k(G))\) is determined by \(\mathrm{Aut}(G)\). Particular attention is given to Hamming graphs and highly symmetric graphs.</p>
 
-## Token Graphs
+    <h3>Strongly Regular Graphs</h3>
+    <p>I am interested in structural properties of strongly regular graphs, especially the case \(\mu=2\). My work focuses on clique geometry, complements of strongly regular graphs, and local structures determined by common neighbours.</p>
+</div>
 
-For a graph $G$, the $k$-token graph $F_k(G)$ is a graph whose vertices correspond to $k$-subsets of $V(G)$. Token graphs encode combinatorial and structural information of the original graph in a higher-dimensional configuration space.
+<div class="section">
+    <h2>Selected Publications</h2>
+    <div class="pub-item">
+        <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, <em>Edge-transitive token graphs</em>, <strong>Discrete Mathematics</strong> 345 (2022) 113043.
+    </div>
+    <div class="pub-item">
+        Na Li, <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, <em>Cubic normal bi-Cayley graphs and bi-normal Cayley graphs</em>, <strong>Advances in Mathematics (China)</strong> 52(2023) no.5.
+    </div>
+    <div class="pub-item">
+        <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, Yan-Tao Li, Young Soo Kwon, <em>The automorphisms of 2-token graphs</em>, <strong>Applied Mathematics and Computation</strong> 446 (2023) 127872.
+    </div>
+    <div class="pub-item">
+        <span class="pub-author">Ju Zhang</span>, Jin-Xin Zhou, Jaeun Lee, Yan-Tao Li, Jin-Hua Xie, <em>Automorphism group of 2-token graph of the Hamming graph</em>, <strong>Discrete Mathematics</strong> 347 (2024) 113689.
+    </div>
+    <div class="pub-item">
+        <span class="pub-author">Ju Zhang</span>, Young Soo Kwon, Jin-Xin Zhou, <em>Automorphism groups of 2-token graph of Cartesian product of two cycles</em>, <strong>Graphs and Combinatorics</strong>, 41 (2025) 77.
+    </div>
+</div>
 
-I study automorphism groups of token graphs and investigate when $\mathrm{Aut}(F_k(G))$ is determined by $\mathrm{Aut}(G)$. Particular attention is given to Hamming graphs and highly symmetric graphs.
-
-## Strongly Regular Graphs
-
-I am interested in structural properties of strongly regular graphs, especially the case $\mu=2$.  
-My work focuses on:
-
-- clique geometry
-- complements of strongly regular graphs
-- local structures determined by common neighbours
-- grid graphs $K_n \square K_n$
-
-These problems are closely connected to finite permutation groups and rank-3 group actions.
-
-## Symmetry and Permutation Groups
-
-Many combinatorial structures can be understood via group actions.  
-I study how graph symmetries reflect properties of permutation groups, particularly:
-
-- vertex-transitive graphs
-- edge-transitive graphs
-- automorphism groups of derived graphs
-  
-<h2>Publications</h2>
-<p>Ju Zhang, Jin-Xin Zhou, Edge-transitive token graphs, Discrete Mathematics 345 (2022) 113043.</p>
-<p>Na Li, Ju Zhang, Jin-Xin Zhou, Cubic normal bi-Cayley graphs and bi-normal Cayley graphs, Advances in Mathematics (China) 52(2023) no.5.</p>
-<p>Ju Zhang, Jin-Xin Zhou, Yan-Tao Li, Young Soo Kwon, The automorphisms of 2-token graphs, Applied Mathematics and Computation 446 (2023) 127872.<p>
-<p>Ju Zhang, Jin-Xin Zhou, Jaeun Lee, Yan-Tao Li, Jin-Hua Xie, Automorphism group of 2-token graph of the Hamming graph, Discrete Mathematics 347 (2024) 113689.<p>
-<p>Ju Zhang, Young Soo Kwon, Jin-Xin Zhou, Automorphism groups of 2-token graph of Cartesian product of two cycles, Graphs and Combinatorics, 41 (2025) 77.<p>
-
-<h2>Contact</h2>
-<p>Email: juzhang@bjtu.edu.cn</p>
+<div class="contact-info">
+    <h3>Contact Information</h3>
+    <p>📧 Email: <a href="mailto:juzhang@bjtu.edu.cn">juzhang@bjtu.edu.cn</a></p>
+    <p>📍 Institution: Beijing Jiaotong University</p>
+</div>
 
 </body>
 </html>
